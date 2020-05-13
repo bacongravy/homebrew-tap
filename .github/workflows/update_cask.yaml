@@ -1,0 +1,34 @@
+name: Update cask
+on:
+  repository_dispatch:
+    types: [update_cask]
+jobs:
+  update_cask:
+    name: Update cask
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set git author
+        env:
+          USER_NAME: ${{ github.event.sender.login }}
+        run: |
+          git config --local user.name "${USER_NAME}"
+          git config --local user.email "${USER_NAME}@users.noreply.github.com"
+      - name: Update cask
+        env:
+          CASK_VERSION: ${{ github.event.client_payload.version }}
+          CASK_NAME: ${{ github.event.client_payload.name }}
+          CASK_SHA256: ${{ github.event.client_payload.sha256 }}
+        run: |
+          sed -i "s/\( *version *'\)\([^']*\)'/\1${CASK_VERSION}'/" Casks/${CASK_NAME}.rb
+          sed -i "s/\( *sha256 *'\)\([^']*\)'/\1${CASK_SHA256}'/" Casks/${CASK_NAME}.rb
+      - name: Add and commit cask
+        env:
+          CASK_NAME: ${{ github.event.client_payload.name }}
+          CASK_VERSION: ${{ github.event.client_payload.version }}
+        run: |
+          git add Casks/${CASK_NAME}.rb
+          git commit -m "update ${CASK_NAME} to v${CASK_VERSION}"
+      - name: Push changes
+        run: |
+          git push origin
