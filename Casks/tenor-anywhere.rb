@@ -1,6 +1,6 @@
 cask 'tenor-anywhere' do
-  version '1.0.0'
-  sha256 '1317efb1fb44d39c1119cab9632c8de2696f211b73409922dd9164f40b65d7dd'
+  version '1.0.1'
+  sha256 'aa81eba6a7b85a16565d8a5385d1ca71c6ff864346ddf5c54962caeb7b315389'
 
   url "https://github.com/bacongravy/tenor-anywhere/releases/download/v#{version}/Tenor_Anywhere.dmg"
   appcast 'https://github.com/bacongravy/tenor-anywhere/releases.atom'
