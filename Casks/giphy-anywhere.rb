@@ -1,6 +1,6 @@
 cask 'giphy-anywhere' do
-  version '0.3.5-pre1'
-  sha256 '0bfb10f484147a79c5319087f01a2abe724ba2b28f807bb023c149f1c529091e'
+  version '0.3.5'
+  sha256 'ed765cc41cc72f1c95de0538e976e0647657169be333883b7b70a2ed7e8c4155'
 
   url "https://github.com/bacongravy/giphy-anywhere/releases/download/v#{version}/GIPHY_Anywhere.dmg"
   appcast 'https://github.com/bacongravy/giphy-anywhere/releases.atom'
