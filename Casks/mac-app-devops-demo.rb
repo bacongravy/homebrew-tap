@@ -1,6 +1,6 @@
 cask 'mac-app-devops-demo' do
-  version '1.0.0'
-  sha256 '38da4af1c1274a1929191ea6c0014f43c4bb8c5ec090857bdd81375400d2f042'
+  version '1.0.1'
+  sha256 '13a4c22a1e649d9fd842399300592f744e915acb5e45a9bcd6715ceec14e0b84'
 
   url "https://github.com/bacongravy/mac-app-devops-demo/releases/download/v#{version}/mac_app_devops_demo.dmg"
   appcast 'https://github.com/bacongravy/mac-app-devops-demo/releases.atom'
