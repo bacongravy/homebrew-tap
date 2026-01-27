@@ -1,13 +1,13 @@
 cask 'your-turn' do
-  version '1.0'
-  sha256 '35bf7ee0885bdedad49bb8e8230b508e6dd763a69d5fd2f534b2b2ebe4f8e6f9'
+  version '1.0.1'
+  sha256 '73dc24a6f5c6c425b23599fd40181c75a74217d4dd03a8c392c163fd712ab736'
 
-  url "https://github.com/bacongravy/your-turn/releases/download/v#{version}/Your-Turn.zip"
+  url "https://github.com/bacongravy/your-turn/releases/download/v#{version}/Your-Turn-#{version}.zip"
   name 'Your Turn'
   desc 'Menu bar app for Claude Code notifications'
   homepage 'https://github.com/bacongravy/your-turn'
 
-  depends_on macos: '>= :sequoia'
+  depends_on macos: '>= :sonoma'
 
   app 'Your Turn.app'
 
