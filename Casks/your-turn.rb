@@ -7,7 +7,5 @@ cask "your-turn" do
   desc "Menu bar app that notifies you when Claude Code needs attention"
   homepage "https://github.com/bacongravy/your-turn"
 
-  license "MIT"
-
   app "Your Turn.app"
 end
