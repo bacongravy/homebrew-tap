@@ -1,19 +1,13 @@
-cask 'your-turn' do
-  version '1.0.1'
-  sha256 '73dc24a6f5c6c425b23599fd40181c75a74217d4dd03a8c392c163fd712ab736'
+cask "your-turn" do
+  version "1.1.0"
+  sha256 "daf884677aa9359992f205aac87766d6c4dc9b5fc0a57f661ca43b26830d238c"
 
-  url "https://github.com/bacongravy/your-turn/releases/download/v#{version}/Your-Turn-#{version}.zip"
-  name 'Your Turn'
-  desc 'Menu bar app for Claude Code notifications'
-  homepage 'https://github.com/bacongravy/your-turn'
+  url "https://github.com/bacongravy/your-turn/releases/download/v1.1.0/Your Turn-v1.1.0.zip"
+  name "Your Turn"
+  desc "Menu bar app that notifies you when Claude Code needs attention"
+  homepage "https://github.com/bacongravy/your-turn"
 
-  depends_on macos: '>= :sonoma'
+  license "MIT"
 
-  app 'Your Turn.app'
-
-  zap trash: [
-    '~/Library/Application Support/Your Turn',
-    '~/Library/Preferences/net.bacongravy.your-turn.plist',
-    '~/.claude/hooks/your-turn-notify.sh',
-  ]
+  app "Your Turn.app"
 end
